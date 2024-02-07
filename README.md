@@ -20,7 +20,7 @@ This is a simple learning project showing a locally run, MySQL, Spring web app w
 ### Executing program
 
 * How to run the program
-* CD into the file django_demo.
+* CD into the folder demo.
 ```
 cd yourpathhere\springdemo\demo\src\main\java\com\example\demo
 ```
