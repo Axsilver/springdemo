@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Boot CRUD Demo</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Spring Boot CRUD Demo All Items</h1>
+        <a href="/demo/allItems">All Items</a>
+        <a href="/demo/addItem">Add Items</a>
+        <a href="/demo/editItem">Edit Item</a>
+        <a href="/demo/deleteItem">Delete Items</a>
+        <table>
+            <thead>
+                <tr>
+                    <th> ID </th>
+                    <th> Title </th>
+                    <th> Author </th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${listItems.empty}">
+                    <td colspan="2"> No Items Available </td>
+                </tr>
+                <tr th:each="item : ${listItems}">
+                    <td><span th:text="${item.id}"> ID </span></td>
+                    <td><span th:text="${item.title}"> Title </span></td>
+                    <td><span th:text="${item.description}"> Description </span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
